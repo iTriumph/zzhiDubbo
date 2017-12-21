@@ -11,14 +11,14 @@ import java.rmi.RemoteException;
  */
 public class RMITest {
 
-//    @Test
-//    public void client() throws MalformedURLException,RemoteException,NotBoundException {
-//
-//        GoldbachDefine goldbach = (GoldbachDefine) Naming.lookup("rmi://localhost:8888/Goldbach");
-//        //output the client result
-//        System.out.println("client:");
-//        for(int i=0 ;i<10;i++) {
-//            System.out.println(goldbach.checkNum(i));
-//        }
-//    }
+    @Test
+    public void client() throws MalformedURLException,RemoteException,NotBoundException {
+
+        GoldbachDefine goldbach = (GoldbachDefine) Naming.lookup("rmi://localhost:8888/Goldbach");
+        //output the client result
+        System.out.println("client:");
+        for(int i=0 ;i<10;i++) {
+            System.out.println(goldbach.checkNum(i));
+        }
+    }
 }

@@ -14,21 +14,21 @@ import java.rmi.registry.LocateRegistry;
  */
 public class RMITest {
 
-//    @Test
-//    public void server() throws RemoteException,MalformedURLException,AlreadyBoundException {
-//        GoldbachDefine goldbach;
-//        goldbach = new GoldbachDefineImp();
-//
-//        //register object
-//        LocateRegistry.createRegistry(8888);
-//        //bing the object to server
-//        Naming.bind("rmi://localhost:8888/Goldbach", goldbach);
-//        System.out.println("server:begin to listen");
-//        try {
-//            System.in.read();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+    @Test
+    public void server() throws RemoteException,MalformedURLException,AlreadyBoundException {
+        GoldbachDefine goldbach;
+        goldbach = new GoldbachDefineImp();
+
+        //register object
+        LocateRegistry.createRegistry(8888);
+        //bing the object to server
+        Naming.bind("rmi://localhost:8888/Goldbach", goldbach);
+        System.out.println("server:begin to listen");
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
