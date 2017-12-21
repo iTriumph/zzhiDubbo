@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zzhiDubbo-api" />
+        <module name="zzhiDubbo-consumer" />
+        <module name="zzhiDubbo-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zzhiDubbo" target="1.8" />
+      <module name="zzhiDubbo-api" target="1.8" />
+      <module name="zzhiDubbo-consumer" target="1.8" />
+      <module name="zzhiDubbo-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
