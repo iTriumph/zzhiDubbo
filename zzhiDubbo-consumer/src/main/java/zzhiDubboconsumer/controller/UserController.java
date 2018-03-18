@@ -3,7 +3,9 @@ package zzhiDubboconsumer.controller;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import zzhiDubboapi.po.User;
 
 import java.util.*;
@@ -12,8 +14,12 @@ import java.util.*;
  * Created by zhangzhii on 2017/12/15.
  */
 @RestController
-@RequestMapping(value="/users")     // 通过这里配置使下面的映射都在/users下，可去除
+@RequestMapping(value = "/users")     // 通过这里配置使下面的映射都在/users下，可去除
 public class UserController {
+
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
