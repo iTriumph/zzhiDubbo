@@ -18,8 +18,9 @@ public class HomeController {
 
     @RequestMapping("/index")
     @ResponseBody
-    public String Home() {
+    public String Home() throws InterruptedException {
         logger.info("home/index 开始");
+        Thread.sleep(20000);
         return "hello world 111";
 
     }
